@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Procesos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codprod</th>
+      <th>Proceso</th>
+      <th>Maquina</th>
+      <th>Operario</th>
+      <th>Ayudante</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @procesos.each do |proceso| %>
+      <tr>
+        <td><%= proceso.CodProd %></td>
+        <td><%= proceso.Proceso %></td>
+        <td><%= proceso.Maquina %></td>
+        <td><%= proceso.Operario %></td>
+        <td><%= proceso.Ayudante %></td>
+        <td><%= link_to 'Show', proceso %></td>
+        <td><%= link_to 'Edit', edit_proceso_path(proceso) %></td>
+        <td><%= link_to 'Destroy', proceso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proceso', new_proceso_path %>

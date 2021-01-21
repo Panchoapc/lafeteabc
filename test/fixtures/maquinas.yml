@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Maquina: MyString
+  CostoHora: 1.5
+
+two:
+  Maquina: MyString
+  CostoHora: 1.5
