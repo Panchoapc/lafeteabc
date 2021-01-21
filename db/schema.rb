@@ -10,7 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_114957) do
+ActiveRecord::Schema.define(version: 2021_01_21_172811) do
+
+  create_table "maquinas", force: :cascade do |t|
+    t.string "Maquina"
+    t.float "CostoHora"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "operarios", force: :cascade do |t|
+    t.string "TipoOperario"
+    t.float "Sueldo"
+    t.float "SueldoHora"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "procesos", force: :cascade do |t|
+    t.string "CodProd"
+    t.string "Proceso"
+    t.string "Maquina"
+    t.integer "Operario"
+    t.integer "Ayudante"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "productos", force: :cascade do |t|
+    t.string "CodProd"
+    t.string "Producto"
+    t.string "Detalle"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

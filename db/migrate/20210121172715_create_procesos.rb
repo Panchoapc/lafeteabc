@@ -4,8 +4,8 @@ class CreateProcesos < ActiveRecord::Migration[6.1]
       t.string :CodProd
       t.string :Proceso
       t.string :Maquina
-      t.int :Operario
-      t.int :Ayudante
+      t.integer :Operario
+      t.integer :Ayudante
 
       t.timestamps
     end
